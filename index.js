@@ -126,7 +126,9 @@ and should return a new array that is identical to the old array. You can name t
 
 function copy(arr){
     let newArr = [...arr];
-    console.log(arr);
+    newArr.push("Vanilla", "Vanilla Burnt Almond");
+    newArr.shift();
+    console.log(newArr);
 }
 copy(originalFlavors);
 
@@ -145,12 +147,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
+let newArr = [];
 
-    /*code here*/
-
+function filterByWord(original, item){
+for(let i = 0; i < original.length; i++){
+    if(original[i].includes(item)){
+        newArr.push(original[i])   
+    }
 }
-
+return newArr
+};
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
